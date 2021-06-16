@@ -2,6 +2,7 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
+	v1 "p-blog/api/v1"
 	"p-blog/utils"
 )
 
@@ -15,7 +16,7 @@ func InitRouter() {
 	auth := r.Group("api/v1")
 	{
 		// 用户模块的路由接口
-
+		auth.POST("user/add", v1.AddUser)
 		//修改密码
 
 		// 分类模块的路由接口
