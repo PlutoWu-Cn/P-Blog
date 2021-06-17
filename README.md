@@ -1,35 +1,102 @@
-[icon]
+![P-Blog标志](https://plutowu-blogimgs.oss-cn-guangzhou.aliyuncs.com/img/P.png "P-Blog logo")
 
-# P-Blog
+[![Language](https://forthebadge.com/images/badges/made-with-go.svg)](https://forthebadge.com)
+[![Open Source](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)
+[![Keybord](https://forthebadge.com/images/badges/powered-by-jeffs-keyboard.svg)](https://forthebadge.com)
 
-[Badges]
+[View English](./README.md)
 
-## Introduction - 介绍
+<!-- TOC -->
 
-### Summary - 概要
+- [P-Blog介绍](#p-blog介绍)
+- [安装](#安装)
+- [技术栈](#技术栈)
+- [许可证](#许可证)
 
-### Features - 特性
+<!-- /TOC -->
 
-## Requirements - 必要条件（环境，对所有项目，和所有子模块和库的描述。）
+## P-Blog介绍
 
-## Configuration - 配置（配置信息。）
+P-Blog是一个使用Gin和Vue搭建的简洁博客。
 
-## Installation - 安装（如何安装。）
+P-Blog提供了一个简便的Gin框架学习项目，旨在帮助初学者更快的入手Golang的实际开发。
 
-## Usage - 用法（用法。）
+![P-Blog架构](https://plutowu-blogimgs.oss-cn-guangzhou.aliyuncs.com/img/P-Blog%E6%9E%B6%E6%9E%84.png)
 
-## Development - 开发（关于怎样开发的文档信息。（API 等。））
+## 安装
 
-## Changelog - 更新日志（一个简短的历史记录（更改，替换或者其他）。）
+1. 克隆该项目。
 
-## FAQ - 常见问题（常见问题。）
+    ```bash
+    git clone https://gitee.com/p1utowu/p-blog.git
+    ```
 
-## Support - 支持
+2. 安装相关依赖。
 
-### Dos - 文档（更多文档。）
+    ```bash
+    go mod tidy
+    ```
 
-### Contact - 联系（其他联系信息（电子邮件地址，网站，公司名称，地址等）。提交bug，功能要求，提交补丁，加入邮件列表，得到通知，或加入用户或开发开发区群的介绍。）
+3. 配置项目设置文件config.ini
 
-## Authors and acknowledgment - 贡献者和感谢（作者列表和鸣谢。）
+   ```ini
+   [server]
+   AppMode = debug # debug-开发模式，release-生产模式
+   HttpPort = :3000 # 项目端口
+   JwtKey = 89js82js72 # JWT密钥，随机字符串即可
+   
+   [database]
+   Db = mysql # 数据库类型，不能变更为其他形式
+   DbHost = 127.0.0.1 # 数据库地址
+   DbPort = 3306 # 数据库端口
+   DbUser = root # 数据库用户名
+   DbPassWord = root # 数据库用户密码
+   DbName = p_blog # 数据库名
+   
+   [qiniu]
+   # 七牛储存信息
+   AccessKey = # AK
+   SecretKey = # SK
+   Bucket = 
+   QiniuSever =
+   ```
 
-## License - 版权信息（版权和许可信息（或阅读许可证）、法律声明。）
+4. 运行SQL中的SQL文件
+
+5. 启动项目
+
+   ```bash
+   go run main.go
+   ```
+
+6. 访问项目
+
+   ```
+   前台页面
+   http://localhost:3000
+   后台管理页面
+   http://localhost:3000/admin
+       
+   默认管理员:admin  密码:123456
+   ```
+
+## 技术栈
+
+- 后端
+  - Gin web framework
+  - GORM
+  - Jwt-Go
+  - Scrypt
+  - Logrus
+  - Go-INI
+- 前端
+  - Vue
+  - Vue Router
+  - Ant Design
+  - Axios
+  - Tinymce
+  - Moment
+
+## 许可证
+
+Apache License 2.0
