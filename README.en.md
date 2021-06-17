@@ -1,36 +1,101 @@
-# p-blog
+![P-Blog标志](https://plutowu-blogimgs.oss-cn-guangzhou.aliyuncs.com/img/P.png "P-Blog logo")
 
-#### Description
-Gin 与 Vue 搭建的极简博客
+[![Language](https://forthebadge.com/images/badges/made-with-go.svg)](https://forthebadge.com)
+[![Open Source](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)
+[![Keybord](https://forthebadge.com/images/badges/powered-by-jeffs-keyboard.svg)](https://forthebadge.com)
 
-#### Software Architecture
-Software architecture description
+<!-- TOC -->
 
-#### Installation
+- [What is P-Blog](#What is P-Blog)
+- [Installation](#Installation)
+- [Technology stack](#Technology stack)
+- [Licence](#Licence)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+<!-- /TOC -->
 
-#### Instructions
+## What is P-Blog
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+P-Blog is a simple blog built with Gin and Vue.
 
-#### Contribution
+P-blog provides a simple learning project of Gin framework, which aims to help beginners start the actual development of Golang faster.
 
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
+![P-Blog架构](https://plutowu-blogimgs.oss-cn-guangzhou.aliyuncs.com/img/P-Blog%E6%9E%B6%E6%9E%84.png)
 
+## Installation
 
-#### Gitee Feature
+1. Clone the project.
 
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+   ```bash
+   git clone https://gitee.com/p1utowu/p-blog.git
+   ```
+
+2. Install related dependencies.
+
+   ```bash
+   go mod tidy
+   ```
+
+3. Configuration project settings file config.ini
+
+   ```ini
+   [server]
+   AppMode = debug # debug-development mode, release-production mode
+   HttpPort = :3000 # Project port
+   JwtKey = 89js82js72 # JWT key, random string
+   
+   [database]
+   Db = mysql # Database type, cannot be changed to another form
+   DbHost = 127.0.0.1 # Database address
+   DbPort = 3306 # Database port
+   DbUser = root # Database user
+   DbPassWord = root # Database password
+   DbName = p_blog # Database name
+   
+   [qiniu]
+   # Qiniu store information
+   AccessKey = # AK
+   SecretKey = # SK
+   Bucket = 
+   QiniuSever =
+   ```
+
+4. Run the SQL file in the SQL folder.
+
+5. Start project
+
+   ```bash
+   go run main.go
+   ```
+
+6. Visit project
+
+   ```
+   Front page
+   http://localhost:3000
+   
+   Background management page
+   http://localhost:3000/admin
+       
+   Default administrator:admin  Password:123456
+   ```
+
+## Technology stack
+
+- Golang
+  - Gin web framework
+  - GORM
+  - Jwt-Go
+  - Scrypt
+  - Logrus
+  - Go-INI
+- JavaScript
+  - Vue
+  - Vue Router
+  - Ant Design
+  - Axios
+  - Tinymce
+  - Moment
+
+## Licence
+
+Apache License 2.0

@@ -4,7 +4,7 @@
 [![Open Source](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)
 [![Keybord](https://forthebadge.com/images/badges/powered-by-jeffs-keyboard.svg)](https://forthebadge.com)
 
-[View English](./README.md)
+[View English](./README.en.md)
 
 <!-- TOC -->
 
