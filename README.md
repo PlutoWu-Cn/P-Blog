@@ -1,37 +1,35 @@
-# p-blog
+[icon]
 
-#### 介绍
-Gin 与 Vue 搭建的极简博客
+# P-Blog
 
-#### 软件架构
-软件架构说明
+[Badges]
 
+## Introduction - 介绍
 
-#### 安装教程
+### Summary - 概要
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+### Features - 特性
 
-#### 使用说明
+## Requirements - 必要条件（环境，对所有项目，和所有子模块和库的描述。）
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## Configuration - 配置（配置信息。）
 
-#### 参与贡献
+## Installation - 安装（如何安装。）
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+## Usage - 用法（用法。）
 
+## Development - 开发（关于怎样开发的文档信息。（API 等。））
 
-#### 特技
+## Changelog - 更新日志（一个简短的历史记录（更改，替换或者其他）。）
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+## FAQ - 常见问题（常见问题。）
+
+## Support - 支持
+
+### Dos - 文档（更多文档。）
+
+### Contact - 联系（其他联系信息（电子邮件地址，网站，公司名称，地址等）。提交bug，功能要求，提交补丁，加入邮件列表，得到通知，或加入用户或开发开发区群的介绍。）
+
+## Authors and acknowledgment - 贡献者和感谢（作者列表和鸣谢。）
+
+## License - 版权信息（版权和许可信息（或阅读许可证）、法律声明。）
