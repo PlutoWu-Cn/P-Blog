@@ -1,14 +1,15 @@
 package v1
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"p-blog/model"
 	"p-blog/utils/errmsg"
 	"strconv"
+
+	"github.com/gin-gonic/gin"
 )
 
-func GetProfile(c *gin.Context)  {
+func GetProfile(c *gin.Context) {
 	id, _ := strconv.Atoi(c.Param("id"))
 	data, code := model.GetProfile(id)
 	c.JSON(http.StatusOK, gin.H{

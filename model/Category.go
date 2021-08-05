@@ -1,8 +1,9 @@
 package model
 
 import (
-	"gorm.io/gorm"
 	"p-blog/utils/errmsg"
+
+	"gorm.io/gorm"
 )
 
 type Category struct {
@@ -30,10 +31,10 @@ func CreateCate(data *Category) int {
 }
 
 // GetCateInfo 查询单个分类信息
-func GetCateInfo(id int) (Category,int) {
+func GetCateInfo(id int) (Category, int) {
 	var cate Category
-	db.Where("id = ?",id).First(&cate)
-	return cate,errmsg.SUCCESS
+	db.Where("id = ?", id).First(&cate)
+	return cate, errmsg.SUCCESS
 }
 
 // GetCate 查询分类列表

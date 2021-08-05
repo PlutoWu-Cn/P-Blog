@@ -1,13 +1,14 @@
 package v1
 
 import (
-	"github.com/dgrijalva/jwt-go"
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"p-blog/middleware"
 	"p-blog/model"
 	"p-blog/utils/errmsg"
 	"time"
+
+	"github.com/dgrijalva/jwt-go"
+	"github.com/gin-gonic/gin"
 )
 
 // Login 后台登陆
@@ -21,7 +22,7 @@ func Login(c *gin.Context) {
 
 	if code == errmsg.SUCCESS {
 		setToken(c, formData)
-	}else {
+	} else {
 		c.JSON(http.StatusOK, gin.H{
 			"status":  code,
 			"data":    formData.Username,
@@ -48,7 +49,6 @@ func LoginFront(c *gin.Context) {
 		"message": errmsg.GetErrMsg(code),
 	})
 }
-
 
 // token生成函数
 func setToken(c *gin.Context, user model.User) {

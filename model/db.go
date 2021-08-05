@@ -2,13 +2,14 @@ package model
 
 import (
 	"fmt"
+	"os"
+	"p-blog/utils"
+	"time"
+
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 	"gorm.io/gorm/schema"
-	"os"
-	"p-blog/utils"
-	"time"
 )
 
 var db *gorm.DB

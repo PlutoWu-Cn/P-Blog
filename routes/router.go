@@ -1,11 +1,12 @@
 package routes
 
 import (
-	"github.com/gin-contrib/multitemplate"
-	"github.com/gin-gonic/gin"
-	"p-blog/api/v1"
+	v1 "p-blog/api/v1"
 	"p-blog/middleware"
 	"p-blog/utils"
+
+	"github.com/gin-contrib/multitemplate"
+	"github.com/gin-gonic/gin"
 )
 
 func createMyRender() multitemplate.Renderer {

@@ -2,11 +2,12 @@ package model
 
 import (
 	"context"
-	"github.com/qiniu/go-sdk/v7/auth/qbox"
-	"github.com/qiniu/go-sdk/v7/storage"
 	"mime/multipart"
 	"p-blog/utils"
 	"p-blog/utils/errmsg"
+
+	"github.com/qiniu/go-sdk/v7/auth/qbox"
+	"github.com/qiniu/go-sdk/v7/storage"
 )
 
 var AccessKey = utils.AccessKey

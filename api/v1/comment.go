@@ -1,11 +1,12 @@
 package v1
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"p-blog/model"
 	"p-blog/utils/errmsg"
 	"strconv"
+
+	"github.com/gin-gonic/gin"
 )
 
 // AddComment 新增评论
@@ -22,9 +23,9 @@ func AddComment(c *gin.Context) {
 }
 
 // GetComment 获取单个评论信息
-func GetComment(c *gin.Context)  {
+func GetComment(c *gin.Context) {
 	id, _ := strconv.Atoi(c.Param("id"))
-	data,code := model.GetComment(id)
+	data, code := model.GetComment(id)
 	c.JSON(http.StatusOK, gin.H{
 		"status":  code,
 		"data":    data,
@@ -95,7 +96,7 @@ func GetCommentListFront(c *gin.Context) {
 		pageNum = 1
 	}
 
-	data, total, code := model.GetCommentListFront(id,pageSize, pageNum)
+	data, total, code := model.GetCommentListFront(id, pageSize, pageNum)
 
 	c.JSON(http.StatusOK, gin.H{
 		"status":  code,

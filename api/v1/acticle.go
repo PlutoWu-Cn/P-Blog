@@ -1,11 +1,12 @@
 package v1
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"p-blog/model"
 	"p-blog/utils/errmsg"
 	"strconv"
+
+	"github.com/gin-gonic/gin"
 )
 
 // AddArticle 添加文章
@@ -87,7 +88,7 @@ func GetArt(c *gin.Context) {
 		return
 	}
 
-	data, code, total := model.SearchArticle(title,pageSize,pageNum)
+	data, code, total := model.SearchArticle(title, pageSize, pageNum)
 	c.JSON(http.StatusOK, gin.H{
 		"status":  code,
 		"data":    data,

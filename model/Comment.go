@@ -1,8 +1,9 @@
 package model
 
 import (
-	"gorm.io/gorm"
 	"p-blog/utils/errmsg"
+
+	"gorm.io/gorm"
 )
 
 type Comment struct {
